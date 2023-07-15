@@ -1,583 +1,643 @@
-﻿
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
     <title>Trang chủ</title>
-    <meta name="description" content="Hellohrm is a cloud-based HR software that streamlines your HR processes and empowers your employees. With modules for leave management, request handling, worklogs, and more, our intuitive platform provides a simple yet robust solution for small businesses. Try Hellohrm for free today!">
-    <meta property="og:title" content="Affordable HR Management Software for Small Businesses | Hellohrm" />
-    <meta property="og:description" content="Hellohrm is a cloud-based HR software that streamlines your HR processes and empowers your employees. With modules for leave management, request handling, worklogs, and more, our intuitive platform provides a simple yet robust solution for small businesses. Try Hellohrm for free today!" />
-    <meta property="og:image" content="https://hellohrm.com/assets/media/social/hellohrm-hr-for-small-business-social2.jpg" />
+    
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="web/assets/css/bundle.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'>
+    <!--<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/4.0.0/iconfont/material-icons.min.css'>-->
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.3.1/css/all.css'>
+    <!--<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css'>-->
 
-    <link rel="stylesheet" href="web/assets/css/style.css">
 
-    <link rel="stylesheet" type="text/css" href="web/assets/fonts/flaticon.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
 
-    <link rel="shortcut icon" href="https://www.hellohrm.com/web/assets/img/favicon.ico" />
-    <!-- Global site tag (gtag.js) - Google Analytics -->
+        aside {
+            width: 30%;
+            padding-left: 15px;
+            margin-left: 15px;
+            float: right;
+            font-style: italic;
+            background-color: lightgray;
+        }
+
+        .bg-black {
+            background: linear-gradient(109.6deg, rgb(36, 45, 57) 11.2%, rgb(16, 37, 60) 51.2%, rgb(0, 0, 0) 98.6%);
+        }
+
+        .text-white {
+            color: white;
+        }
+
+        .text-black {
+            color: black;
+        }
+
+        .bg-primary-orange {
+            background-color: #fec503;
+        }
+
+        .primary-orange {
+            color: #fec503;
+        }
+
+        .org-btn {
+            border: 1px solid #fec503;
+            color: #fec503;
+        }
+
+            .org-btn:hover {
+                background-color: #fec503;
+                color: white;
+            }
+
+        .light-grey {
+            color: #6c757d;
+        }
+
+        .bg-light-grey {
+            background-color: #6c757d:;
+        }
+
+        .social-buttons-circle-dark-grey {
+            background: #1a1d20;
+        }
+
+        /* img css */
+
+        .testimonals-container img{
+            width:300px;
+            margin: auto;
+        } 
+
+        /* hero */
+        .center {
+            text-align: center;
+        }
+
+        /*  Card hover */
+        .move-up:hover {
+            background-color: #fec503;
+            color: white;
+            transition: all .5s;
+            transform: translateY(-10px);
+        }
+
+        .ng-mrg-t {
+            margin-top: -50px;
+        }
+
+
+        /* Footer code */
+        .foot {
+            /*   position: relative; */
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #1a1d20;
+            color: white;
+            text-align: center;
+            top: 75px;
+        }
+
+        a {
+            color: #6c757d;
+        }
+
+            a:hover {
+                color: #fec503;
+                text-decoration: none;
+            }
+
+        ::selection {
+            background: #fec503;
+            text-shadow: none;
+        }
+
+        .footer-column {
+            text-align: center;
+        }
+
+        .nav-link {
+            padding: 0.1rem 0;
+        }
+
+        span.nav-link {
+            color: #6c757d;
+        }
+
+            span.nav-link:hover {
+                color: #fec503;
+            }
+
+        span.footer-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #fff;
+            text-transform: uppercase;
+        }
+
+        .fas {
+            margin-right: 0.5rem;
+        }
+
+        footer {
+            padding: 2rem 0;
+            background-color: #212529;
+        }
+
+
+        ul.social-buttons {
+            margin-bottom: 0;
+        }
+
+            ul.social-buttons li a:active,
+            ul.social-buttons li a:focus,
+            ul.social-buttons li a:hover {
+                background-color: #fec503;
+            }
+
+            ul.social-buttons li a {
+                font-size: 20px;
+                line-height: 40px;
+                display: block;
+                width: 40px;
+                height: 40px;
+                -webkit-transition: all 0.3s;
+                -moz-transition: all 0.3s;
+                transition: all 0.3s;
+                color: #fff;
+                border-radius: 100%;
+                outline: 0;
+                background-color: #1a1d20;
+            }
+
+        footer .quick-links {
+            font-size: 90%;
+            line-height: 40px;
+            margin-bottom: 0;
+            text-transform: none;
+            font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+
+        .copyright {
+            color: white;
+        }
+
+        .fa-ellipsis-h {
+            color: white;
+            padding: 2rem 0;
+        }
+    </style>
+
+    <script>
+        window.console = window.console || function (t) { };
+    </script>
+
+
 
 </head>
-<body>
 
-    <header class="header home">
-        <header class="header home">
-            <div class="container">
-                <nav class="navbar navbar-expand-lg">
-                    <a class="navbar-brand" href="https://www.hellohrm.com/">
-                        <img src="https://www.hellohrm.com/web/assets/img/logo.png" alt="Logo">
-                    </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav ml-auto">
-                            <!-- <li class="nav-item active">
-                                <a class="nav-link" href="https://www.hellohrm.com/hr-software-features">Home <span class="sr-only">(current)</span></a>
-                            </li> -->
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Đặc trưng
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="https://www.hellohrm.com/hr-employee-management">Quản lý nhân sự</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="https://www.hellohrm.com/hr-leave-management">Quản lý nghỉ phép</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="https://www.hellohrm.com/hr-worklog-management">Tập trung hóa nhật ký công việc</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="https://www.hellohrm.com/organization-management">Quản lý tổ chức</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="https://www.hellohrm.com/hr-announcement">Thông Báo</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="https://www.hellohrm.com/hr-request">Lời yêu cầu</a>
-                                </div>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://www.hellohrm.com/process">Quá trình</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://www.hellohrm.com/pricing">Định giá</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://www.hellohrm.com/about">Về</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://www.hellohrm.com/contact">Liên hệ</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://www.hellohrm.com/login">Đăng nhập</a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-        </header>
-    </header>
-    <section class="banner-area" style="background-image: url(https://www.hellohrm.com/web/assets//img/banner-bg.svg);">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-5 col-lg-6 pr-10 pr-lg-0 mt-0 mt-md-30 text-left">
-                    <div class="banner-content-wrapper text-left">
-                        <h1 class="banner-title section-title mb-30">Mang lại sự đơn giản trong trải nghiệm nhân sự</h1>
-                        <ul class="banner-content">
-                            <li>Khái niệm về ngày trễ</li>
-                        </ul>
-                        <div class="btn-wrapper d-flex">
-                            <a href="https://hellodat.pages.dev/" class="btn common-btn banner-btn">Bắt đầu miễn phí <img class="img-fluid" src="https://www.hellohrm.com/web/assets//img/btn-arrow.svg"></a>
-                            <ul class="btn-side-text">
-                                <li>Không cần thẻ tín dụng</li>
-                                <li>Không cần đăng ký</li>
+<body translate="no">
+    <div class="nav-bar">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">HelloHRM</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#hero-sec">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#team">Team</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#testi">Testimonials</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Privacy policy
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
                             </ul>
-                        </div>
-                        <div class="download-btn-wrap mt-40">
-                            <p>Chúng tôi có app sẵn tại</p>
-                            <div class="download-btn d-flex align-items-center align-items-sm-left flex-column flex-sm-row">
-                                <a href="https://apps.apple.com/app/hellohrm/id1643842412" target="_blank"><img class="img-fluid" src="https://www.hellohrm.com/web/assets//img/download-btn-1.jpg"></a>
-                                <a href="https://play.google.com/store/apps/details?id=com.codersbucket.hellohrm" target="_blank"><img class="img-fluid ml-20" src="https://www.hellohrm.com/web/assets//img/download-btn-2.jpg"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-7 col-lg-6 d-flex align-items-center">
-                    <div class="banner-img-wrapper text-lg-center text-left">
-                        <img class="img-fluid" src="https://www.hellohrm.com/web/assets//img/banner-img.png" />
-                    </div>
-                    <!-- <video style="width:100%;max-height:100%" autoplay muted loop>
-                        <source src="https://www.hellohrm.com/web/assets/img/hellohrm.mp4" type="video/mp4">
-                    </video> -->
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#featured">Featured</a>
+                        </li>
+                    </ul>
+
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Banner End -->
-
-    <section class="apps-area pt-60">
-        <div class="container">
-            <div class="apps-content-wrapper content-wrapper text-center m-auto">
-                <h2 class="section-title mb-20">Hellohrm giúp duy trì năng suất và hiệu quả cho công ty của bạn</h2>
-                <p>Với các mô-đun nhân sự thông minh và đơn giản lấy người dùng làm trung tâm, chúng tôi giúp bạn tăng hiệu quả và tiết kiệm rất nhiều thời gian</p>
-            </div>
-            <div class="row apps-items justify-content-center mt-40">
-                <div class="col-lg-3 col-sm-6">
-                    <div class="apps-item text-center">
-                        <img class="img-fluid mb-10" src="https://www.hellohrm.com/web/assets//img/apps-1.svg">
-                        <h3 class="apps-title">Quản lý nhân sự</h3>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="apps-item text-center">
-                        <img class="img-fluid mb-10" src="https://www.hellohrm.com/web/assets//img/apps-2.svg">
-                        <h3 class="apps-title">Quản lý nghỉ phép</h3>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="apps-item text-center">
-                        <img class="img-fluid mb-10" src="https://www.hellohrm.com/web/assets//img/apps-3.svg">
-                        <h3 class="apps-title">Tập trung hóa nhật ký công việc</h3>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="apps-item text-center">
-                        <img class="img-fluid mb-10" src="https://www.hellohrm.com/web/assets//img/apps-4.svg">
-                        <h3 class="apps-title">Quản lý tổ chức</h3>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="apps-item text-center">
-                        <img class="img-fluid mb-10" src="https://www.hellohrm.com/web/assets//img/apps-6.svg">
-                        <h3 class="apps-title">Thông báo</h3>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="apps-item text-center">
-                        <img class="img-fluid mb-10" src="https://www.hellohrm.com/web/assets//img/apps-5.svg">
-                        <h3 class="apps-title">Yêu cầu</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Apps Area End -->
-
-    <section class="streamline-area" style="background-image: url(https://www.hellohrm.com/web/assets//img/streamline-bg.svg);">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 col-12">
-                    <div class="streamline-slider">
-                        <div class="stream-card">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="stream-content text-left m-auto">
-                                        <div class="icon"><img class="img-fluid" src="https://www.hellohrm.com/web/assets//img/stream-icon-1.svg"></div>
-                                        <h4 class="section-title text-left mb-20">Khái niệm về ngày trễ (p1)</h4>
-                                        <p>khi bạn nghỉ từ ngày 20-21/4 mà quên tạo đơn xin nghỉ, đến hôm nay là ngày 22/4 thì bạn mới nhớ để tạo đơn thì đơn được tạo này gọi là đơn trễ.</p>
-                                        <a class="apps-url" href="https://www.hellohrm.com/hr-employee-management">Tìm hiểu thêm</a>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 mt-30 mt-md-0">
-                                    <img class="img-fluid" src="https://www.hellohrm.com/web/assets//img/stream-img-1.svg">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="stream-card">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="stream-content text-left m-auto">
-                                        <div class="icon"><img class="img-fluid" src="https://www.hellohrm.com/web/assets//img/stream-icon-2.svg"></div>
-                                        <h4 class="section-title text-left mb-20">Khái niệm về ngày trễ (p2)</h4>
-                                        <p>đơn của bạn trễ bao nhiêu ngày sẽ được tính từ ngày bạn trở lại làm việc đến hiện tại VD:bạn nghỉ ngày 19/4 mà không tạo đơn xin nghỉ mà tới 22/4 bạn mới tạo thì ngày trễ sẽ tính từ ngày 19/4 đến 22/4 là trễ 3 ngày.</p>
-                                        <a class="apps-url" href="https://www.hellohrm.com/hr-leave-management">Tìm hiểu thêm</a>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 mt-30 mt-md-0">
-                                    <img class="img-fluid" src="https://www.hellohrm.com/web/assets//img/stream-img-2.svg">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="stream-card">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="stream-content text-left m-auto">
-                                        <div class="icon"><img class="img-fluid" src="https://www.hellohrm.com/web/assets//img/stream-icon-3.svg"></div>
-                                        <h4 class="section-title text-left mb-20">Nhật ký công việc tập trung</h4>
-                                        <p>Xem thông tin chi tiết tốt hơn về nguồn nhân lực hiện tại của bạn từ bảng chấm công tập trung với các khách hàng và dự án khác nhau. Kết nối với hệ thống quản lý dự án khách hàng của bạn và đặt tất cả nhật ký công việc của bạn vào một nơi.</p>
-                                        <a class="apps-url" href="https://www.hellohrm.com/hr-worklog-management">Tìm Hiểu thêm</a>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 mt-30 mt-md-0">
-                                    <img class="img-fluid" src="https://www.hellohrm.com/web/assets//img/stream-img-3.svg">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="stream-card">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="stream-content text-left m-auto">
-                                        <div class="icon"><img class="img-fluid" src="https://www.hellohrm.com/web/assets//img/stream-icon-4.svg"></div>
-                                        <h4 class="section-title text-left mb-20">Quản lý tổ chức</h4>
-                                        <p>Từ việc tạo tổ chức đến quản lý tài liệu, Hellohrm phục vụ bạn với cách quản lý tổ chức dễ dàng nhất. Cập nhật logo của bạn để cá nhân hóa phần mềm và thúc đẩy tổ chức của bạn.</p>
-                                        <a class="apps-url" href="https://www.hellohrm.com/organization-management">Tìm hiểu thêm</a>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 mt-30 mt-md-0">
-                                    <img class="img-fluid" src="https://www.hellohrm.com/web/assets//img/stream-img-4.svg">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="stream-card">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="stream-content text-left m-auto">
-                                        <div class="icon"><img class="img-fluid" src="https://www.hellohrm.com/web/assets//img/stream-icon-5.svg"></div>
-                                        <h4 class="section-title text-left mb-20">Quản lý thông báo</h4>
-                                        <p>Có thể là toàn công ty hoặc cho một nhóm cụ thể, bạn có lợi thế là tạo một thông báo sẽ bật lên trên bảng điều khiển của mọi nhân viên khi họ đăng nhập. Ứng dụng di động của chúng tôi cũng cung cấp cơ sở này cho họ.</p>
-                                        <a class="apps-url" href="https://www.hellohrm.com/hr-announcement">Tìm hiểu thêm</a>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 mt-30 mt-md-0">
-                                    <img class="img-fluid" src="https://www.hellohrm.com/web/assets//img/stream-img-5.svg">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="stream-card">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="stream-content text-left m-auto">
-                                        <div class="icon"><img class="img-fluid" src="https://www.hellohrm.com/web/assets//img/stream-icon-6.svg"></div>
-                                        <h4 class="section-title text-left mb-20">Khái niệm về ngày trễ (p1)</h4>
-                                        <p>khi bạn nghỉ từ ngày 20-21/4 mà quên tạo đơn xin nghỉ, đến hôm nay là ngày 22/4 thì bạn mới nhớ để tạo đơn thì đơn được tạo này gọi là đơn trễ.</p>
-                                        <a class="apps-url" href="https://www.hellohrm.com/hr-request">Learn More</a>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 mt-30 mt-md-0">
-                                    <img class="img-fluid" src="https://www.hellohrm.com/web/assets//img/stream-img-6.svg">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Streamline Area End -->
-
-    <section class="second-apps-area">
-        <div class="container">
-            <div class="second-apps-content content-wrapper text-center m-auto">
-                <h2 class="section-title mb-20">Tận dụng năng suất tối đa và tận dụng những giờ quý giá</h2>
-                <p>Hellohrm được tích hợp nhiều tính năng thông minh với công nghệ quản lý nhân sự hiện đại</p>
-            </div>
-            <div class="row apps-list justify-content-center my-40">
-                <div class="col-lg-3 col-sm-6">
-                    <div class="apps-item text-center">
-                        <img class="img-fluid mb-30" src="https://www.hellohrm.com/web/assets//img/apps-s-1.svg">
-                        <h3 class="apps-title">Interactive Dashboard</h3>
-                        <p>Summarized dashboards will give you an interactive view for HRs and Employees</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="apps-item text-center">
-                        <img class="img-fluid mb-30" src="https://www.hellohrm.com/web/assets//img/apps-2.svg">
-                        <h3 class="apps-title">Khái niệm về ngày trễ (p2)</h3>
-                        <p>đơn của bạn trễ bao nhiêu ngày sẽ được tính từ ngày bạn trở lại làm việc đến hiện tại VD:bạn nghỉ ngày 19/4 mà không tạo đơn xin nghỉ mà tới 22/4 bạn mới tạo thì ngày trễ sẽ tính từ ngày 19/4 đến 22/4.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="apps-item text-center">
-                        <img class="img-fluid mb-30" src="https://www.hellohrm.com/web/assets//img/apps-6.svg">
-                        <h3 class="apps-title">Announcement</h3>
-                        <p>Company-wide annoucement for all the employees that pops up in the dashboard</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="apps-item text-center">
-                        <img class="img-fluid mb-30" src="https://www.hellohrm.com/web/assets//img/apps-5.svg">
-                        <h3 class="apps-title">Request</h3>
-                        <p>Create requests to ask for any requition of HR help with follow up and approvals</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="apps-item text-center">
-                        <img class="img-fluid mb-30" src="https://www.hellohrm.com/web/assets//img/apps-4.svg">
-                        <h3 class="apps-title">Organizational hierarchy</h3>
-                        <p>Manage your organization with your preferred hierarchy with admin, managers etc.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="apps-item text-center">
-                        <img class="img-fluid mb-30" src="https://www.hellohrm.com/web/assets//img/apps-s-6.svg">
-                        <h3 class="apps-title">Data Protection</h3>
-                        <p>No personal data is accessed by anyone accept your designated Hellohrm account</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="apps-item text-center">
-                        <img class="img-fluid mb-30" src="https://www.hellohrm.com/web/assets//img/apps-s-7.svg">
-                        <h3 class="apps-title">Reporting</h3>
-                        <p>A range of detailed reporting to help you take better decision for your company</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="apps-item text-center">
-                        <img class="img-fluid mb-30" src="https://www.hellohrm.com/web/assets//img/apps-s-8.svg">
-                        <h3 class="apps-title">Enhance Security</h3>
-                        <p>Complete security features to protect your information from malicious attack</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Second Apps Area End -->
-
-    <section class="gray-section py-70" style="background-image: url(https://www.hellohrm.com/web/assets//img/gray-bg.svg);">
-        <div class="container">
-            <div class="gray-sec-content content-wrapper text-center m-auto">
-                <h3 class="section-title text-center mb-30">Chào! Hellohrm giúp chúng tôi tăng năng suất...</h3>
-                <p>Với Hellohrm, hãy trao quyền cho nhân viên làm tất cả những gì họ từng thấy và xây dựng một Thương hiệu Nhà tuyển dụng đầy cảm hứng.</p>
-                <a class="btn common-btn gray-sec-btn" href="https://hellodat.pages.dev/">Bắt đầu miễn phí  <img class="img-fluid" src="https://www.hellohrm.com/web/assets//img/btn-arrow.svg"></a>
-            </div>
-        </div>
-    </section>
-    <!-- Gray Area End --><!-- Gray Area End -->
-
-    <section class="third-apps-area">
-        <div class="container">
-
-        </div>
-    </section>
-    <!-- Third Apps Area End -->
-
-    <section class="mobile-area mb-80">
-        <div class="container">
-            <div class="mobile-content content-wrapper text-left mr-auto">
-                <h2 class="section-title">Cung cấp trải nghiệm gốc trên thiết bị di động cho nhân viên gốc trên thiết bị di động của bạn</h2>
-            </div>
-            <div class="row mt-30">
-                <div class="col-md-6 col-sm-12">
-                    <div class="mobile-content content-wrapper text-left mr-auto">
-                        <p>Nhân viên của bạn mong đợi quyền truy cập di động tương tự như các ứng dụng được sử dụng nhiều nhất của họ. Tại sao nó phải khác đối với nhân sự?</p>
-                    </div>
-                    <div class="mobile-left-img mt-10">
-                        <img class="img-fluid" src="https://www.hellohrm.com/web/assets//img/mobile-img-1.png">
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-12 position-relative">
-                    <div class="right-side">
-                        <div class="mobile-right-img ml-auto">
-                            <img class="img-fluid" src="https://www.hellohrm.com/web/assets//img/mobile-img-2.png">
-                        </div>
-                        <img class="img-fluid h-logo" src="https://www.hellohrm.com/web/assets//img/mobile-h-logo.svg">
-                        <div class="content-wrapper">
-                            <p>Cài đặt ứng dụng di động của chúng tôi cho cả thiết bị Android và iOS và tận hưởng trải nghiệm mượt mà của Hellohrm ngay trong túi của bạn.</p>
-                        </div>
-
-                        <div class="download-btn d-flex align-items-center align-items-sm-left flex-column flex-sm-row">
-                            <a href="https://apps.apple.com/app/hellohrm/id1643842412" target="_blank"><img class="img-fluid" src="https://www.hellohrm.com/web/assets//img/download-btn-1.jpg"></a>
-                            <a href="https://play.google.com/store/apps/details?id=com.codersbucket.hellohrm" target="_blank"><img class="img-fluid ml-20" src="https://www.hellohrm.com/web/assets//img/download-btn-2.jpg"></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Mobile Area End -->
-
-    <section class="solution-area">
-        <div class="container">
-            <div class="solution-content content-wrapper text-left mr-auto">
-                <h2 class="section-title">Một Hellohrm mỗi ngày, giải quyết hầu hết các vấn đề của bạn?</h2>
-            </div>
-            <div class="row mt-30 mt-lg-80">
-                <div class="col-lg-3 col-sm-6 mt-30 mt-lg-0">
-                    <div class="solution-item text-center text-sm-left">
-                        <img class="img-fluid mb-10 mb-lg-40" src="https://www.hellohrm.com/web/assets//img/solution-1.svg">
-                        <h3 class="apps-title">Tinh giản nhân sự</h3>
-                        <p>Chúng tôi đã giới thiệu giải pháp đơn giản và thông minh, hiệu quả và giúp bạn thoát khỏi các công việc hành chính cứng nhắc.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 mt-30 mt-lg-0">
-                    <div class="solution-item text-center text-sm-left">
-                        <img class="img-fluid mb-10 mb-lg-40" src="https://www.hellohrm.com/web/assets//img/solution-2.svg">
-                        <h3 class="apps-title">Quản lý công ty</h3>
-                        <p>Hellohrm cho phép bạn cập nhật và cá nhân hóa phần mềm với thương hiệu tổ chức của bạn bằng logo và email.</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-sm-6 mt-30 mt-lg-0">
-                    <div class="solution-item text-center text-sm-left">
-                        <img class="img-fluid mb-10 mb-lg-40" src="https://www.hellohrm.com/web/assets//img/solution-3.svg">
-                        <h3 class="apps-title">Quản lý nghỉ phép</h3>
-                        <p>Hellohrm cung cấp tính năng quản lý nghỉ phép thông minh và tương tác dựa trên chính sách công ty mà bạn thiết lập.</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-sm-6 mt-30 mt-lg-0">
-                    <div class="solution-item text-center text-sm-left">
-                        <img class="img-fluid mb-10 mb-lg-40" src="https://www.hellohrm.com/web/assets//img/solution-4.svg">
-                        <h3 class="apps-title">Quản lý nhật ký công việc</h3>
-                        <p>Hellohrm đã đưa ra nhật ký công việc đơn giản cho nhân viên và báo cáo hiệu quả cho quản trị viên nhân sự với tinh thần đôi bên cùng có lợi.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Solution Area End -->
-
-    <section class="user-area" style="background-image: url(https://www.hellohrm.com/web/assets//img/user-bg.svg);">
-        <div class="container">
-            <div class="solution-content text-center mr-auto">
-                <h2 class="section-title mb-30 mb-lg-80">Lời nhận xét từ người dùng sau khi sử dụng phần mềm của chúng tôi</h2>
-            </div>
-            <div class="row">
-                <div class="col-md-12 col-12">
-                    <div class="review-slider">
-
-                        <div class="review-card text-center" style="background-image: url(https://www.hellohrm.com/web/assets//img/review-bg.svg);">
-                            <div class="review">
-                                <img class="img-fluid mx-auto mb-50" src="https://www.hellohrm.com/web/assets//img/quotation.svg">
-                                <p>Các chính sách nghỉ phép mà Hellohrm cung cấp thực sự dễ cấu hình và dễ áp ​​dụng cho nhân viên. Ứng dụng di động giúp người quản lý rất nhiều chỉ cần đăng nhập và cập nhật trạng thái.</p>
-                                <h4 class="reviewer">Devon</h4>
-                                <span>Bloke</span>
-                            </div>
-                        </div>
-
-                        <div class="review-card text-center" style="background-image: url(https://www.hellohrm.com/web/assets//img/review-bg.svg);">
-                            <div class="review">
-                                <img class="img-fluid mx-auto mb-50" src="https://www.hellohrm.com/web/assets//img/quotation.svg">
-                                <p>I Tôi đã vật lộn với phần mềm hrm trước đây của mình có quá nhiều tính năng mà chúng tôi không thể sử dụng. Hellohrm cung cấp cho tôi thứ đơn giản nhất để sử dụng và nó đã thực sự giúp chúng tôi phát triển nhanh chóng.</p>
-                                <h4 class="reviewer">Yeasir</h4>
-                                <span>Poicobytes</span>
-                            </div>
-                        </div>
-
-                        <div class="review-card text-center" style="background-image: url(https://www.hellohrm.com/web/assets//img/review-bg.svg);">
-                            <div class="review">
-                                <img class="img-fluid mx-auto mb-50" src="https://www.hellohrm.com/web/assets//img/quotation.svg">
-                                <p>Chúng tôi là một công ty phần mềm dựa trên dịch vụ và chúng tôi phải gửi bảng chấm công thường xuyên cho khách hàng của mình. Hellohrm hợp lý hóa điều này một cách hoàn hảo. Chúng tôi chỉ xuất nhật ký và gửi email cho họ. Điều này thật dễ dàng.</p>
-                                <h4 class="reviewer">Angela</h4>
-                                <span>Green Bay</span>
-                            </div>
-                        </div>
-
-                        <div class="review-card text-center" style="background-image: url(https://www.hellohrm.com/web/assets//img/review-bg.svg);">
-                            <div class="review">
-                                <img class="img-fluid mx-auto mb-50" src="https://www.hellohrm.com/web/assets//img/quotation.svg">
-                                <p>Các chính sách nghỉ phép mà Hellohrm cung cấp thực sự dễ cấu hình và dễ áp ​​dụng cho nhân viên. Ứng dụng di động giúp người quản lý rất nhiều chỉ cần đăng nhập và cập nhật trạng thái.</p>
-                                <h4 class="reviewer">Yeasir</h4>
-                                <span>Poicobytes</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- User Area End -->
-
-    <section class="get-started-section gray-section">
-        <div class="container">
-            <div class="gray-sec-content content-wrapper text-center m-auto">
-                <h3 class="section-title text-center mb-30">Nền tảng HRM hợp lý giúp bạn tiết kiệm thời gian</h3>
-                <p> Hellohrm giúp bạn nhanh chóng thích nghi với những thay đổi và làm cho quy trình nhân sự của bạn trở nên mạnh mẽ và hiệu quả.</p>
-                <a class="btn common-btn gray-sec-btn" href="https://hellodat.pages.dev/">Bắt đầu miễn phí <img class="img-fluid" src="https://www.hellohrm.com/web/assets//img/btn-arrow.svg"></a>
-            </div>
-        </div>
-    </section>
-    <!-- Get Started Area End -->
-
-    <footer class="footer pt-40 pb-20" style="background-image: url(https://www.hellohrm.com/web/assets//img/footer-shade.png);">
-        <div class="container">
-            <div class="footer-top pb-40">
-                <div class="row">
-                    <div class="col-sm-4">
-                        <a class="footer-logo" href="https://www.hellohrm.com/">
-                            <img src="https://www.hellohrm.com/web/assets/img/footer-logo.png" alt="Logo">
-                        </a>
-                    </div>
-                    <div class="col-sm-8 mt-30 mt-sm-0">
-                        <ul class="text-left text-sm-right social-links mb-0 p-0">
-                            <li><a href="https://www.facebook.com/thaihoa.tranba.9/" target="_blank"><i class="fi flaticon-facebook-logo" aria-hidden="true"></i></a></li>
-                            <li><a href="https://www.youtube.com/channel/UCsCsIomK3MwNicA4X4f66pg" target="_blank"><i class="fi flaticon-youtube-play-button" aria-hidden="true"></i></a></li>
-                            <li><a href="https://hellohrm.pages.dev/" target="_blank"><i class="fi flaticon-home-icon-silhouette" aria-hidden="true"></i></a></li>
-                            <!-- <li><a href="#" target="_blank"><i class="fi flaticon-youtube-play-button" aria-hidden="true"></i></a></li> -->
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row align-items-end">
-                <!-- <div class="col-sm-6 col-lg-4 text-center text-lg-left order-2 order-lg-1 mb-10 mb-sm-0">
-                    HelloHRM  &copy; 2023            </div> -->
-                <div class="col-sm-12 col-lg-6 text-left order-2 order-lg-1">
-                    <div class="download-btn-wrap mt-40">
-                        <p>Tải xuống app tại</p>
-                        <div class="download-btn d-flex align-items-left flex-column flex-sm-row mb-40">
-                            <a href="https://apps.apple.com/app/hellohrm/id1643842412" target="_blank"><img class="img-fluid" src="https://www.hellohrm.com/web/assets//img/download-btn-1.jpg"></a>
-                            <a href="https://play.google.com/store/apps/details?id=com.codersbucket.hellohrm" target="_blank"><img class="img-fluid ml-20" src="https://www.hellohrm.com/web/assets//img/download-btn-2.jpg"></a>
-                        </div>
-                        <span>Được cung cấp và quản lý bởi <a href="https://codersbucket.com/" target="_blank">CodersBucket Ltd. </a>2023 - Bảo lưu mọi quyền.</span>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-lg-6 mt-40 order-1 order-lg-2 mb-0 mb-lg-50">
-                    <div class="policy-wrap d-flex justify-content-between">
-                        <div class="policies text-left">
-                            <!--<h4 class="policy-title mb-20">Đặc trưng</h4>
-                            <a href="https://www.hellohrm.com/hr-software-features">Quản lý nhân sự</a>
-                            <a href="https://www.hellohrm.com/hr-leave-management">Quản lý nghỉ phép</a>
-                            <a href="https://www.hellohrm.com/hr-worklog-management">Tập trung hóa nhật ký công việc</a>
-                            <a href="https://www.hellohrm.com/organization-management">Quản lý tổ chức</a>
-                            <a href="https://www.hellohrm.com/hr-announcement">Thông báo</a>
-                            <a href="https://www.hellohrm.com/hr-request">Yêu cầu</a>-->
-                        </div>
-                        <div class="policies text-left mt-30 mt-sm-0">
-                            <h4 class="policy-title mb-20">Người khác</h4>
-                            <a href="https://www.hellohrm.com/about">Về chúng tôi</a>
-                            <a href="https://www.hellohrm.com/contact">Liên hệ chúng tôi</a>
-                            <a href="https://apphrm.github.io/Chinhsachbaomat/">Chính sách bảo mật</a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </footer>
-
-    <div class="totop">
-        <i class="fi flaticon-up-arrow" aria-hidden="true"></i>
+        </nav>
     </div>
-    <script src="https://www.hellohrm.com/web/assets/js/bundle.js"></script>
-    <script>
-    setInterval(function(){
-        if(document.activeElement instanceof HTMLIFrameElement){
-            document.getElementById('cover').style.opacity=0;
-            document.getElementById('player').style.opacity=1;
-        }
-    } , 50);
-    </script>
-    <script>
-     $(window).scroll(function() {
-        var scroll = $(window).scrollTop();
 
-       if (scroll > 700) {
-           $('.totop').css('bottom', '55px');
-       } else {
-           $('.totop').css('bottom', '-50px');
-       }
-    } );
-    </script>
+    <div class="hero-container" id="hero-sec">
+        <div class="container-fluid ">
+            <div class="row d-flex">
+                <div class="col align-middle">
+                    <div class="px-2 py-2">
+                        <img src="https://hoatha.github.io/readmore/imgs/hello.gif" class="mx-auto d-block img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="px-5 py-5 mt-5">
+                        <div class="px-2 py-2 align-middle">
+                            <h4>AppHRM's homepage</h4>
+                            <p> Completely free application, instant experience, no need to log in, signing!</p>
+                        </div>
+                        <div class="px-2 py-2">
+                            <button type="button" class="d-flex btn btn-outline-primary">
+
+                                <i class="fab fa-android fa-fw text-success fs-4"></i>
+
+                                <span>Download AppHRM app now</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- main container -->
+        <div class="main-container">
+            <!--<div class="container-fluid">
+                ...
+            </div>-->
+        </div>
+
+        <!--  Card container  -->
+        <div class="card-container bg-black" id="team">
+            <div class="container-fluid px-3 py-3">
+                <div class="row center mx-4 my-4 text-white">
+                    <h2>Outstanding Functions</h2>
+                    <p>Outstanding functions, as shown in the following figures</p>
+                </div>
+                <div class="row mb-5">
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="https://apphrm.github.io/Chinhsachbaomat/img/1.png" class="card-img-top" style="height:600px" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Shift watch</h5>
+                                <p class="card-text">The shift watch helps you check the shifts of the day</p>
+                                <a href="https://hellohrm.pages.dev" class="btn org-btn">Learn More.</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="https://apphrm.github.io/Chinhsachbaomat/img/2.png" class="card-img-top" style="height:600px" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">The graph shows the number of employees</h5>
+                                <p class="card-text">The graph shows the number of employees, helping you to see the total number of employees and gender </p>
+                                <a href="https://hellohrm.pages.dev" class="btn org-btn">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="https://apphrm.github.io/Chinhsachbaomat/img/4.png" class="card-img-top" style="height:600px" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Jhon Doe</h5>
+                                <p class="card-text">Expert in all aspects of coding and knowledgeable about a wide range of coding languages</p>
+                                <a href="https://hellohrm.pages.dev" class="btn org-btn">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- <div class="aside-container">
+          <div class="container-fluid">
+         <aside>
+        <p>The Epcot center is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+        </aside>
+        </div>
+        </div> -->
+        <!--  testimonals container  -->
+        <div class="testimonals-container mt-4 mb-4" id="testi">
+            <div class="container-fluid">
+                <div class="row center mx-4 my-4">
+                    <h2>Highlight</h2>
+                    <p>Read our Testimonals</p>
+                </div>
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <!--       <img src="..." class="d-block w-100" alt="..."> -->
+                            <div class="card-group">
+                                <div class="card">
+                                    <img src="https://apphrm.github.io/media_shared/odat/vi/assets/img/device_vn.png" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <small class="text-muted">Last updated 3 mins ago</small>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img src="https://apphrm.github.io/media_shared/odat/vi/assets/img/Untitled_black.png" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <small class="text-muted">Last updated 3 mins ago</small>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img src="https://apphrm.github.io/media_shared/odat/vi/assets/img/kichhoat3_vn.png" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <small class="text-muted">Last updated 3 mins ago</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <!--       <img src="..." class="d-block w-100" alt="..."> -->
+                            <div class="card-group">
+                                <div class="card">
+                                    <img src="https://apphrm.github.io/media_shared/odat/vi/assets/img/kichhoat_vn.png" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <small class="text-muted">Last updated 3 mins ago</small>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img src="https://apphrm.github.io/media_shared/odat/vi/assets/img/Untitled.png" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <small class="text-muted">Last updated 3 mins ago</small>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img src="https://apphrm.github.io/media_shared/odat/vi/assets/img/ot_vn.png" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <small class="text-muted">Last updated 3 mins ago</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <!--       <img src="..." class="d-block w-100" alt="..."> -->
+                            <div class="card-group">
+                                <div class="card">
+                                    <img src="https://apphrm.github.io/media_shared/odat/vi/assets/img/Untitled.png" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <small class="text-muted">Last updated 3 mins ago</small>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img src="https://apphrm.github.io/media_shared/odat/vi/assets/img/hol_vn.png" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <small class="text-muted">Last updated 3 mins ago</small>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img src="https://apphrm.github.io/media_shared/odat/vi/assets/img/shiftmap.png" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <small class="text-muted">Last updated 3 mins ago</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- overlay box -->
+        <!--   <div class="mt-5 mx-1">
+          <div class="card bg-black text-white ">
+          <div class="card-body px-4 py-4">
+
+            </div>
+           </div>
+          </div> -->
+        <!--  banner container  -->
+        <div class="banner-container mt-5 mb-5" id="featured">
+            <div class="container-fluid px-4 py-4">
+                <div class="card bg-black text-white shadow-lg ">
+                    <h5 class="card-header">Highlights</h5>
+                    <div class="card-body">
+                        <!--     <h5 class="card-title">Special Teachers for Students</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <a href="#" class="btn org-btn center">Learn More</a> -->
+                        <div class="conatiner">
+                            <div class="row d-flex justify-content-around">
+                                <div class="col">
+                                    <div class="card h-100 text-black move-up mb-3">
+                                        <div class="card-header">Supports all kinds of timekeeping data formats</div>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Attendance data</h5>
+                                            <p class="card-text">... taken from fingerprint timekeeper, face recognition, magnetic card, AI camera, QA code scanning ..., produced by countries around the world.</p>
+                                            <!--     <a href="#" class="btn btn-outline-primary center">View our curriculum</a> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card h-100 text-black move-up mb-3">
+                                        <div class="card-header">Smart app</div>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Works on all devices</h5>
+                                            <p class="card-text">... such as Desktop, Laptop, Pad, Smartphone, ... by Chrome, Edge, Safari, Firefox, Opera...</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card h-100 text-black move-up mb-3">
+                                        <div class="card-header">Timekeeping calculation</div>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Timekeeping calculation</h5>
+                                            <p class="card-text">Compare each employee's shift with actual data from the timekeeping device, plus the policy of Shift Change, Vacation, Overtime, Holiday ... The software calculates the number of working days, late arrivals, early departures. , divided into types of leave, overtime ...</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card h-100 text-black move-up mb-3">
+                                        <div class="card-header">Extremely high calculation speed</div>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Quick calculation</h5>
+                                            <p class="card-text">Calculation time for 1000 employees < 10 seconds, can use many #CALs to increase calculation efficiency. Each #CAL will take care of the number of employees that need to be counted and run in parallel.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <div class="footer-container foot">
+            <div class="container-fluid">
+                <footer>
+                    <div class="">
+                        <div class="row">
+                            <div class="col-md-4 footer-column">
+                                <ul class="nav flex-column">
+                                    <li class="nav-item">
+                                        <span class="footer-title">Product</span>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="https://hellohrm.pages.dev">AppHRM</a>
+                                    </li>
+                                    <!--<li class="nav-item">
+                                        <a class="nav-link" href="#">Product 2</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Plans & Prices</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Frequently asked questions</a>
+                                    </li>-->
+                                </ul>
+                            </div>
+                            <div class="col-md-4 footer-column">
+                                <ul class="nav flex-column">
+                                    <li class="nav-item">
+                                        <span class="footer-title">Company</span>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">About us</a>
+                                    </li>
+                                    <!--<li class="nav-item">
+                                        <a class="nav-link" href="#">Job postings</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">News and articles</a>
+                                    </li>-->
+                                </ul>
+                            </div>
+                            <div class="col-md-4 footer-column">
+                                <ul class="nav flex-column">
+                                    <li class="nav-item">
+                                        <span class="footer-title">Contact & Support</span>
+                                    </li>
+                                    <li class="nav-item">
+                                        <span class="nav-link"><i class="fas fa-phone"></i>+84981 601 729</span>
+                                    </li>
+                                    <!--<li class="nav-item">
+                                        <a class="nav-link" href="#"><i class="fas fa-comments"></i>Live chat</a>
+                                    </li>-->
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#"><i class="fas fa-envelope"></i>toilathaihoa@gmail.com</a>
+                                    </li>
+                                    <!--<li class="nav-item">
+                                        <a class="nav-link" href="#"><i class="fas fa-star"></i>Give feedback</a>
+                                    </li>-->
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="text-center"><i class="fas fa-ellipsis-h"></i></div>
+
+                        <div class="row text-center">
+                            <div class="col-md-4 box">
+                                <span class="copyright quick-links">
+                                    Copyright &copy; apphrm
+                                    <script>document.write(new Date().getFullYear())</script>
+                                </span>
+                            </div>
+                            <div class="col-md-4 box">
+                                <ul class="list-inline social-buttons">
+                                    <li class="list-inline-item">
+                                        <!--<a href="#">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>-->
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a href="https://www.facebook.com/apphrm/">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                    </li>
+                                    <!--<li class="list-inline-item">
+                                        <a href="#">
+                                            <i class="fa fa-envelope" style="font-size:24px"></i>
+                                        </a>
+                                    </li>-->
+                                </ul>
+                            </div>
+                            <div class="col-md-4 box">
+                                <ul class="list-inline quick-links">
+                                    <li class="list-inline-item">
+                                        <a href="#">Privacy Policy</a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a href="#">Terms of Use</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/js/bootstrap.min.js'></script>
+
+
 </body>
-</html>
 
+</html>
